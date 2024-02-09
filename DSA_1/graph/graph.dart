@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Graph {
   Map<int,List<int>>map={};
 
@@ -29,6 +31,37 @@ class Graph {
     }
   });
  }
+ breadthFirstSearch(int startIndex){
+  List<int>allvalues=[];
+  map.forEach((key, value) {
+    allvalues.add(key);
+  });
+  List<int>queue=[];
+  queue.add(startIndex);
+  while (queue.isNotEmpty) {
+  int currentvertex=queue.removeAt(0);
+  stdout.write("$currentvertex ");
+  allvalues.remove(currentvertex);
+  for(int element in map[currentvertex]!){
+    if(allvalues.contains(element)){
+      queue.add(element);
+    }
+  }
+  if(queue.isEmpty && allvalues.isNotEmpty){
+    queue.add(allvalues[0]);
+  }
+ }
+}
+deapthFirstSearch(int startIndex){
+  List<int>allvalues=[];
+  map.forEach((key, value) {
+    allvalues.add(key);
+  });
+  dfshelper(startIndex,allvalues);
+}
+dfshelper(int startIndex,List<int>allvalues){
+  
+}
 }
 void main(){
   Graph graph=Graph();
@@ -39,4 +72,6 @@ void main(){
   graph.insert(22, 31, false);
   graph.delete(11);
   graph.display();
+  graph.breadthFirstSearch(5);
+
 }
