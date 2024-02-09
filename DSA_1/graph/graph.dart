@@ -19,6 +19,16 @@ class Graph {
   display(){
     print(map);
   }
+ delete(int vertex){
+  if(map.containsKey(vertex)){
+    map.remove(vertex);
+  }
+  map.forEach((key, value) {
+    if(value.contains(vertex)){
+      value.remove(vertex);
+    }
+  });
+ }
 }
 void main(){
   Graph graph=Graph();
@@ -27,5 +37,6 @@ void main(){
   graph.insert(7, 11, true);
   graph.insert(11, 22, false);
   graph.insert(22, 31, false);
+  graph.delete(11);
   graph.display();
 }
