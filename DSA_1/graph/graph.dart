@@ -52,16 +52,7 @@ class Graph {
   }
  }
 }
-deapthFirstSearch(int startIndex){
-  List<int>allvalues=[];
-  map.forEach((key, value) {
-    allvalues.add(key);
-  });
-  dfshelper(startIndex,allvalues);
-}
-dfshelper(int startIndex,List<int>allvalues){
-  
-}
+
 }
 void main(){
   Graph graph=Graph();
