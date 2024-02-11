@@ -92,10 +92,12 @@ class BinarySearchTree {
   }
 
   int getMinValue(Node? currentnode) {
-    while (currentnode?.left != null) {
-      currentnode = currentnode!.left;
+    if(currentnode!.left==null){
+      return currentnode.data;
     }
-    return currentnode?.data ?? 0;
+    else{
+      return getMinValue(currentnode.left);
+    }
   }
 
   void inorder() {
@@ -108,6 +110,26 @@ class BinarySearchTree {
       print(node.data);
       inorderHelper(node.right);
     }
+  }
+  void preorder(){
+   preorderHelper(root);
+  }
+  preorderHelper(Node? node){
+   if(node!=null){
+    print(node.data);
+    preorderHelper(node.left);
+    preorderHelper(node.right);
+   }
+  }
+  postorder(){
+    postorderHelper(root);
+  }
+  postorderHelper(Node? node){
+   if(node!=null){
+    postorderHelper(node.left);
+    postorderHelper(node.right);
+    print(node.data);
+   }
   }
 
   int findClosest(int target) {
@@ -135,8 +157,14 @@ void main() {
   tree.insert(8);
   tree.insert(3);
   tree.insert(2);
-  tree.remove(3);
+  // tree.remove(3);
   print(tree.contains(3));
-  print(tree.findClosest(6));
+  print('*****');
+  print(tree.findClosest(7));
+  print('*****');
   tree.inorder();
+  print('ssfsadfdfadf');
+  tree.preorder();
+  print('fsadfdjfadhfk');
+  tree.postorder();
 }
