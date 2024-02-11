@@ -42,10 +42,18 @@ class MinHeap {
    peek(){
   return heap[0];
   }
-  rempve(){
+  removehead(){
     swap(heap,heap.length-1,0);
     heap.removeAt(heap.length-1);
     shiftdown(0);
+  }
+    void remove(int value) {
+    int index = heap.indexOf(value);
+    if (index != -1) {
+      heap[index] = heap.last;
+      heap.removeLast();
+      shiftdown(index);
+    }
   }
   parent(int i){
     return (i-1)~/2;
@@ -73,10 +81,14 @@ class MinHeap {
   
 }
 void main(){
-  List<int>array=[5,2,8];
+  List<int>array=[5,12,8];
   MinHeap heap=MinHeap(array);
   heap.insert(2);
   heap.insert(32);
   heap.insert(24);
+  heap.display();
+  heap.remove(8);
+  print('\n');
+  heap.removehead();
   heap.display();
 }
