@@ -1,6 +1,5 @@
 
 class MaxHeap {
-  List<int>arraylist=[];
   late List<int>heap;
   MaxHeap(List<int>array){
    heap=array;
