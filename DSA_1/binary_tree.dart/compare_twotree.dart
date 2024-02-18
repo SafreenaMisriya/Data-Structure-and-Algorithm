@@ -1,5 +1,5 @@
 class TreeNode {
-  late int key;
+   int? key;
   TreeNode? left, right;
   TreeNode(int key) {
     this.key = key;

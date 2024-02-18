@@ -38,6 +38,6 @@ class Trie {
 }
 }
 void main(){
-Trie trie=Trie('banana');
-print(trie.contains('nana'));
+Trie trie=Trie('safreena');
+print(trie.contains('anee'));
 }
