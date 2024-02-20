@@ -1,25 +1,15 @@
 class TreeNode {
   late int key;
   TreeNode? left, right;
-
-  TreeNode(int item) {
-    key = item;
-    left = right = null;
-  }
+  TreeNode(this.key);
 }
 
 class BST {
   TreeNode? root;
-
-  BST() {
-    root = null;
-  }
-
   TreeNode? findLCA(TreeNode? root, int n1, int n2) {
     if (root == null) {
       return null;
     }
-
     if (root.key > n1 && root.key > n2) {
       return findLCA(root.left, n1, n2);
     } else if (root.key < n1 && root.key < n2) {
