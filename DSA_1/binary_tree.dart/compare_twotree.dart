@@ -1,10 +1,7 @@
 class TreeNode {
    int? key;
   TreeNode? left, right;
-  TreeNode(int key) {
-    this.key = key;
-    left = right = null;
-  }
+  TreeNode(this. key) ;
 }
 
 bool areIdentical(TreeNode? root1, TreeNode? root2) {

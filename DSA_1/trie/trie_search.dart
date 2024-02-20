@@ -89,6 +89,7 @@ class Trie {
     List<String> elements = [];
     displayStringWithPrefixHelper(node, prefix, elements);
     print(elements);
+    print(elements.length);
   }
 
   displayStringWithPrefixHelper(
@@ -102,6 +103,7 @@ class Trie {
       }
     });
   }
+  
 }
 
 void main(List<String> args) {

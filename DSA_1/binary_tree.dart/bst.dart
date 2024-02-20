@@ -157,8 +157,8 @@ void main() {
   tree.insert(8);
   tree.insert(3);
   tree.insert(2);
-  // tree.remove(3);
-  print(tree.contains(3));
+  tree.remove(12);
+  print(tree.contains(12));
   print('*****');
   print(tree.findClosest(7));
   print('*****');

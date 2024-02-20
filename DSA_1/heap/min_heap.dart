@@ -1,6 +1,5 @@
 class MinHeap {
-  List<int>arraylist=[];
-
+ 
     late List<int>heap;
   MinHeap(List<int>array){
     heap=array;
