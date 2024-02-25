@@ -108,15 +108,15 @@ class Trie {
 
 void main(List<String> args) {
   Trie trie = Trie();
-  trie.insert("shaham");
-  trie.insert("ab");
-  trie.insert("sha");
-  trie.insert("shambu");
-  print(trie.contains("shafi"));
+  trie.insert("apple");
+  trie.insert("app");
+  trie.insert("apsara");
+  trie.insert("apply");
+  print(trie.contains("app"));
   List<String> strings = trie.displayStrings();
   print(strings);
-  trie.delete("shambu");
+  trie.delete("app");
   strings = trie.displayStrings();
-  trie.displayStringWithPrefix("sha");
+  trie.displayStringWithPrefix("ap");
   
 }
