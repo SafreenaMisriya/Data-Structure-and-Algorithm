@@ -7,8 +7,6 @@ List<int> removeDuplicates(List<int> arr, [int index = 0]) {
   int currentElement = arr[index];
   print(currentElement);
   List<int> remainingArray = removeDuplicates(arr, index + 1);
-
-  // Check if the current element is  // Base case: reached the end of the arraynot already in the remaining array
   if (!remainingArray.contains(currentElement)) {
     remainingArray.add(currentElement);
   }
