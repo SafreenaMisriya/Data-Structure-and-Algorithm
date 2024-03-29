@@ -3,10 +3,8 @@ class TreeNode {
   late int number;
   TreeNode? left, right;
 
-  TreeNode(String objectId, int number) {
-    this.objectId = objectId;
-    this.number = number;
-  }
+  TreeNode( this.objectId , this.number) ;
+ 
 }
 
 class BST {

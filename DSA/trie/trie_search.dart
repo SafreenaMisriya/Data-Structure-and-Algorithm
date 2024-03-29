@@ -55,7 +55,7 @@ class Trie {
     }
   }
 
-  bool deleteHelper(TrieNode node, String str, int index) {
+   deleteHelper(TrieNode node, String str, int index) {
     if (index == str.length) {
       node.children.remove(endSymbol);
       return node.children.isEmpty;
