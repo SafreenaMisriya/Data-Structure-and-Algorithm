@@ -81,7 +81,6 @@ class bst {
    }
    
      getminvalue(Node? root) {
-     // ignore: unused_local_variable
      int minvalue=root!.data;
      while(root!.left !=null){
       minvalue=root.left!.data;

@@ -32,7 +32,7 @@ class MinHeap {
   }
   shiftup(int currentIndex){
     int parentIndex=parent(currentIndex);
-    while (currentIndex>=0&& heap[parentIndex]>heap[currentIndex]) {
+    while (currentIndex>=0&& heap[parentIndex]>heap[currentIndex]){
       swap(heap, currentIndex, parentIndex);
       currentIndex=parentIndex;
       parentIndex=parent(currentIndex);
@@ -84,7 +84,7 @@ void main(){
   MinHeap heap=MinHeap(array);
   heap.insert(2);
   heap.insert(32);
-  heap.insert(24);
+  heap.insert(1);
   heap.display();
   heap.remove(8);
   print('\n');

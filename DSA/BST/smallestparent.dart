@@ -10,8 +10,8 @@ class TreeNode {
   }
 
   TreeNode? current = root;
-  while (current!.right !.right != null) {
-    current = current.right;
+  while (current!.left !.left != null) {
+    current = current.left;
   }
   return current;
 }
